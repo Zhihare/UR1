@@ -35,7 +35,7 @@ body {
 	font-size: 16px;
 	background-color: yellow;
 	position: relative;
-	background-image: url('/img/elem-logo\ \(2\).png');
+	background-image: url('./img/elem-logo\ \(2\).png');
 	background-repeat: no-repeat;
 	background-position-y: calc(var(--index)*-19);
 	background-position-x: calc(var(--index)*2);
@@ -433,7 +433,7 @@ body {
 
 
 .About-background-img {
-	background-image: url("/img/elem-logo (2).png");
+	background-image: url("./img/elem-logo (2).png");
 	background-position-x: 80%;
 	background-position-y: 46%;
 	background-size: 650px;
@@ -472,7 +472,7 @@ body {
 
 .About-next-info-title-img {
 	position: relative;
-	background-image: url("/img/icons/clyacks.png");
+	background-image: url("./img/icons/clyacks.png");
 	background-position-x: 0%;
 	background-position-y: 0%;
 	background-size: 100px;
