@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>UR1</title>
+	<link rel="icon" type="image/svg+xml" href="./img/icons/linklogo.svg" />
+	<title>OUR1</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet"
@@ -15,7 +16,7 @@
 
 <body>
 	<header class="header">
-		<button class="header-button">Menu
+		<button class="header-button" data-menu-open>Menu
 			<img class="header-button-icon" width="14px" src="./img/icons/🡦.png">
 		</button>
 		<nav>
@@ -82,6 +83,30 @@
 				</div>
 			</div>
 		</div>
+		<div class="About-container">
+			<div class="About-title">
+				<h1 class="About-title-title">Events</h1>
+				<button class="About-title-button">
+					<img class="About-title-img-button" src="./img/icons/elem_right.png" width="66px">
+				</button>
+			</div>
+		</div>
+		<div class="About-container">
+			<div class="About-title">
+				<h1 class="About-title-title">Past exhibitions</h1>
+				<button class="About-title-button">
+					<img class="About-title-img-button" src="./img/icons/elem_right.png" width="66px">
+				</button>
+			</div>
+		</div>
+		<div class="About-container">
+			<div class="About-title">
+				<h1 class="About-title-title">Catalogue</h1>
+				<button class="About-title-button">
+					<img class="About-title-img-button" src="./img/icons/elem_right.png" width="66px">
+				</button>
+			</div>
+		</div>
 
 		<div class="About-container">
 			<div class="About-title">
@@ -91,13 +116,17 @@
 				</button>
 			</div>
 			<div class="Abaut-paragraph-container">
-				<p class="About-paragraph">The OUR1 Art Foundation is a nonprofit exhibition space that encourages the
+				<p class="About-paragraph">The OUR1 Art Foundation is a nonprofit exhibition space that
+					encourages the
 					appreciation of contemporary art among
-					diverse audiences. Founded in 2008 by art patron and philanthropist Glenn Fuhrman, OUR1 presents
+					diverse audiences. Founded in 2008 by art patron and philanthropist Glenn Fuhrman, OUR1
+					presents
 					rotating exhibitions
-					that include artworks borrowed from a variety of sources. OUR1 invites a broad range of creative
+					that include artworks borrowed from a variety of sources. OUR1 invites a broad range of
+					creative
 					individuals to curate
-					thematic group shows and works in-depth with artists to provide curatorial support and a platform to
+					thematic group shows and works in-depth with artists to provide curatorial support and a
+					platform to
 					realize solo
 					exhibitions.</p>
 				<img class="Abaut-paragraph-img" src="./img/icons/clyacks_white.png" width="480px">
@@ -135,14 +164,18 @@
 				<div class="visit-conteiner">
 					<h2 class="visit-conteiner-title">Plan Your Visit</h2>
 					<form class="visit-form">
-						<label class="visit-label" for="Name"><span class="label-text">Your Name</span>
-							<input class="visit-input" type="text" name="Name">
+						<label class="visit-label" for="Name">
+							<input class="visit-input" type="text" name="Name" placeholder="&nbsp;">
+							<span class="label-text">Your Name</span>
 						</label>
-						<label class="visit-label" for="Email"><span class="label-text">Your Email</span>
-							<input class="visit-input" type="email" name="Email">
+						<label class="visit-label" for="Email">
+							<input class="visit-input" type="email" name="Email" placeholder="&nbsp;">
+							<span class="label-text">Your Email</span>
 						</label>
-						<label class="visit-label" for="Number"><span class="label-text">Your phone number</span>
-							<input class="visit-input" type="number" name="Number">
+						<label class="visit-label" for="Number">
+							<input class="visit-input" type="number" name="Number" placeholder="&nbsp;">
+							<span class="label-text">Your phone
+								number</span>
 						</label>
 						<button type="submit" class="visit-button">To Plan
 							<img class="title-button-img" src="./img/icons/elem.png" width="48px">
@@ -159,11 +192,10 @@
 
 	</main>
 
-
-
-
-
-	<footer></footer>
+	<footer class="footer-conteiner">
+		<load src="./footer.html" />
+	</footer>
+	<load src="./mobile-menu.html" />
 	<script src="script.js"></script>
 </body>
 

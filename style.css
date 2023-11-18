@@ -1,5 +1,8 @@
+@import url('./mobile-menu.css');
+
 :root {
 	--index: calc(1vw + 1vh);
+	--transition-duration-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -30,6 +33,8 @@ li {
 
 
 body {
+	max-width: 1440px;
+	margin: 0 auto;
 	font-family: 'Unbounded', sans-serif;
 	color: var(--body-text-cl);
 	font-size: 16px;
@@ -195,7 +200,9 @@ body {
 	}
 }
 
-.main-titles {}
+.main-titles {
+	padding-bottom: 48px;
+}
 
 .title-site {
 	color: #070707;
@@ -254,6 +261,7 @@ body {
 
 @media only screen and (min-width: 768px) {
 	.button-block {
+		margin-top: 184px;
 		width: 485px;
 		display: flex;
 		height: 44px;
@@ -266,6 +274,12 @@ body {
 
 	.title-button.white {
 		width: 156px;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.button-block {
+		margin-top: 48px;
 	}
 }
 
@@ -428,6 +442,7 @@ body {
 .About-next-info {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 96px;
 }
 
 
@@ -442,6 +457,15 @@ body {
 	height: 508px;
 }
 
+@media only screen and (min-width: 1440px) {
+	.About-background-img {
+		position: absolute;
+		bottom: 140px;
+		width: 225px;
+		rotate: -90deg;
+	}
+}
+
 
 
 .About-twosector {
@@ -450,7 +474,7 @@ body {
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
-	width: 500px;
+	width: 456px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -462,6 +486,13 @@ body {
 		margin-top: 48px;
 		margin-bottom: 48px;
 	}
+}
+
+@media only screen and (min-width: 768px) and (max-width:880px) {
+	.About-twosector {
+		width: 400px;
+	}
+
 }
 
 .About-next-info-title {
@@ -562,20 +593,39 @@ body {
 	border-bottom: 1px solid #070707;
 }
 
-.label-text {
-	position: absolute;
-
-	font-size: 18px;
-	font-weight: 200;
-	line-height: 24px;
-}
-
 .visit-input {
 	background-color: transparent;
 	border: none;
 	width: 100%;
 	height: 30px;
 }
+
+.label-text {
+	position: absolute;
+	width: 220px;
+	transition: var(--transition-duration-and-func);
+	transform-origin: center left;
+	z-index: -10;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 24px;
+}
+
+
+.visit-input:focus+.label-text,
+.visit-input:not(:placeholder-shown)+.label-text {
+	transform: translateY(-90%) scale(0.8);
+	z-index: 10;
+	padding: 0 15px;
+	width: 300px;
+}
+
+.visit-input:focus,
+.visit-input:not(:placeholder-shown) {
+	outline-color: transparent;
+}
+
+
 
 .visit-button {
 	display: flex;
@@ -611,5 +661,148 @@ body {
 
 	.visit-button img {
 		margin-left: auto;
+	}
+}
+
+/**
+  |============================
+  | Footer
+  |============================
+*/
+.footer-conteiner {
+	color: white;
+	display: flex;
+	padding: 48px 65px;
+	justify-content: space-between;
+	background-color: black;
+}
+
+@media only screen and (max-width: 1440px) {
+	.footer-navigation {
+		display: none;
+	}
+
+	.footer-conteiner {
+		padding: 48px 40px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.footer-conteiner {
+		padding: 0 16px;
+		flex-wrap: wrap;
+	}
+
+}
+
+.footer-navigation {}
+
+.footer-navigation-container {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	align-items: center;
+	align-content: space-between;
+	justify-items: center;
+	width: 488px;
+	height: 100%;
+}
+
+.footer-navigation-item {
+	padding: 24px 20px;
+}
+
+.footer-logo {
+	width: 192px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 35px;
+}
+
+.navigation-icons.footer {
+	width: 100%;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.navigation-icons.footer {
+		display: none;
+	}
+
+	.footer-logo {
+		padding-bottom: 0;
+	}
+}
+
+.nav-icons-item {}
+
+.nav-icons-item-svg.footer {
+	fill: white;
+}
+
+.footer-form {
+	width: 527px;
+	padding: 24px 0;
+}
+
+.footer-form-form {
+	display: flex;
+	justify-content: flex-end;
+	gap: 12px;
+}
+
+
+
+.footer-title {
+	color: #F9F9F9;
+	font-size: 28px;
+	font-weight: 200;
+	letter-spacing: 0.28px;
+	text-align: end;
+	margin-bottom: 35px
+}
+
+
+.footer-title-span {
+	font-weight: 400;
+}
+
+
+.footer-form-label {}
+
+
+.footer-form-input {
+	width: 356px;
+	height: 64px;
+	border-radius: 66px;
+	border: 2px solid #FFF;
+	background: transparent;
+	padding: 32px 20px 32px 20px;
+	color: white;
+}
+
+.footer-form-button {
+	display: flex;
+	padding: 20px 32px;
+	justify-content: center;
+	align-items: center;
+	gap: 12.417px;
+
+	border-radius: 66px;
+	border: 1.035px solid #FFF;
+	background: #F9F9F9;
+}
+
+@media only screen and (max-width: 768px) {
+	.footer-form-form {
+		justify-content: flex-start;
+
+	}
+
+	.footer-title {
+		text-align: start;
+	}
+
+	.footer-form-input {
+		width: auto;
 	}
 }
